@@ -1,68 +1,151 @@
-# Oratora 🎤
-
-Oratora is an AI-powered public speaking coach that helps people improve **how they speak**, not what they say.
-
-Instead of focusing on grammar or vocabulary, Oratora analyzes **delivery** — pauses, silence, pace, confidence, and presence — using audio and video signals. It shows speakers the exact moments where they lose flow or confidence and provides clear, actionable feedback to improve.
-
-Most public speaking tools judge words.
-Oratora judges **delivery**.
-
- If you need to access the website you can do the same by clicking on the link:- 
- https://oratora-ai.vercel.app/
----
-
-## Why Oratora?
-
-Great speeches often fail because of:
-- awkward pauses
-- nervous silence
-- rushed pace
-- loss of eye contact
-- declining confidence over time
-
-Oratora was built to address these real problems by turning public speaking into a **measurable, improvable skill**.
+# Oratora 🎤  
+AI-Powered Public Speaking Analysis & Improvement Platform
 
 ---
 
-## What Oratora Does
+## 1. Problem Statement
+Public speaking performance is usually judged subjectively, with limited actionable feedback on delivery aspects such as pauses, pace, silence, and confidence. Most tools focus on speech content rather than *delivery mechanics*, making it difficult for speakers to identify and correct specific issues in real time.
 
-- Analyzes **audio** to detect silence, pauses, fillers, pace, and vocal stability  
-- Analyzes **video** to understand eye contact and nervous movement  
-- Tracks **confidence drift** throughout a speech  
-- Provides explainable scores and visual feedback  
-- Helps speakers practice and improve over time  
-
-All feedback is designed to be **practical, ethical, and easy to understand**.
+There is a need for a system that not only analyzes delivery but also **actively helps users improve and verifies that improvement**.
 
 ---
 
-## Our Philosophy
+## 2. Solution Overview
+Oratora is a web-based AI platform that analyzes a user’s speech using **audio and webcam input** to evaluate delivery-focused metrics such as:
 
-Oratora does not try to sound smarter than the speaker.  
-It helps the speaker **sound more confident and in control**.
+- Flow Continuity  
+- Pause Control  
+- Vocal Confidence  
+- Visual Confidence  
+- Speech Flow Timeline (smooth flow, natural pauses, awkward silences)
 
-No grammar correction.  
-No emotion diagnosis.  
-No psychological claims.
+Oratora goes beyond analysis by introducing a **closed-loop improvement system** consisting of:
+- A **Context-Aware AI Coach**
+- **Personalized Practice Tasks**
+- **Before vs After performance comparison**
 
-Just better delivery.
-
----
-
-## Who It’s For
-
-- Students and educators  
-- Startup founders and presenters  
-- Debate and MUN participants  
-- Interview preparation  
-- Anyone who wants to speak with confidence  
+This ensures measurable improvement, not just feedback.
 
 ---
 
-## Our Mission
+## 🌐 Live Deployed Website
+The application is deployed and accessible here:
 
-To make high-quality public speaking feedback accessible to everyone by focusing on the most overlooked part of communication — **delivery**.
+🔗 **https://oratora-ai.vercel.app/**
+
+User can use the live version to:
+- Record a speech using microphone and webcam
+- View delivery analysis metrics
+- Interact with the AI Coach
+- Complete personalized practice tasks
+- Compare before vs after performance
+
+
+
+
+---
+## 3. Simple Architecture Diagram
+```
+User (Browser)
+↓
+Audio + Webcam Capture
+↓
+Frontend (React / Next.js)
+↓
+Feature Extraction
+├─ Audio signals (pauses, silence, pace)
+├─ Video signals (eye contact, presence, movement)
+↓
+AI Analysis Engine
+├─ Metric scoring
+├─ Speech flow timeline
+↓
+AI Coach Logic
+├─ Weakest metric detection
+├─ Context-aware explanation
+├─ Practice task assignment
+↓
+Results Dashboard
+├─ Scores
+├─ AI Coach feedback
+├─ Practice mode
+└─ Before vs After comparison
+```
+---
+
+## 4. Tech Stack
+
+### Frontend
+- React / Next.js
+- TypeScript
+- Tailwind CSS
+- Web Audio API
+- MediaDevices API (Webcam & Mic)
+
+### Backend / Logic
+- Node.js
+- Client-side ML logic & heuristics
+- API-based AI inference
+
+### Deployment
+- Vercel
 
 ---
 
-**Oratora — Master the pause. Control the room.**
+## 5. AI Tools Used
+- Large Language Model (LLM) for **context-aware coaching feedback**
+- Audio signal analysis for silence, pauses, pace
+- Video frame analysis for visual confidence indicators
+- Rule-based + AI hybrid scoring system
+
+---
+
+## 6. Prompt Strategy Summary
+The AI Coach uses **strict prompt constraints** to ensure high-quality feedback:
+
+- Reads only delivery metrics (not speech content)
+- Identifies the weakest metric
+- Explains *why* the issue occurred
+- References *where* in the speech it happened
+- Generates **one actionable practice task**
+
+Response format enforced:
+Issue:
+Explanation:
+Practice Task:
+How This Helps:
+
+No motivational, generic, or content-rewriting responses are allowed.
+
+---
+
+## 7. Setup Instructions (Local)
+
+### Prerequisites
+- Node.js (v18+ recommended)
+- npm or yarn
+- Webcam & microphone enabled
+
+### Steps
+```bash
+git clone https://github.com/USERNAME/REPO_NAME.git
+cd REPO_NAME
+npm install
+npm run dev
+
+Open browser at:
+http://localhost:3000
+```
+No environment variables are required.
+All features run locally in browser using standard Web APIs.
+
+---
+
+## 8. Final Output
+The final output is an interactive dashboard that provides:
+- Delivery scores
+- Speech flow timeline visualization
+- Context-aware AI coaching feedback
+- Personalized practice tasks
+- Before vs After performance comparison
+
