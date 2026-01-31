@@ -88,14 +88,13 @@ Results Dashboard
 - Node.js
 - Client-side ML logic & heuristics
 - API-based AI inference
-- Supabase
   
-### APIs
-- Google Gemini 3 Flash
-- Lovable API
+### AI Tools
+- Google Gemini 3 Flash (context-aware coaching & analysis)
+- Lovable AI (UI scaffolding & rapid prototyping)
 
 ### Database
-- 	PostgreSQL with RLS policies
+- 	PostgreSQL (via Supabase, with RLS policies)
   
 ### Deployment
 - Vercel
