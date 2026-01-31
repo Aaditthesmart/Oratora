@@ -77,8 +77,10 @@ Results Dashboard
 
 ### Frontend
 - React / Next.js
+- Vite
 - TypeScript
 - Tailwind CSS
+- Shadcn/ui (Radix primitives)
 - Web Audio API
 - MediaDevices API (Webcam & Mic)
 
@@ -86,7 +88,15 @@ Results Dashboard
 - Node.js
 - Client-side ML logic & heuristics
 - API-based AI inference
+- Supabase
+  
+### APIs
+- Google Gemini 3 Flash
+- Lovable API
 
+### Database
+- 	PostgreSQL with RLS policies
+  
 ### Deployment
 - Vercel
 
